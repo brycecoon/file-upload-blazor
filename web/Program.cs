@@ -18,6 +18,17 @@ builder.Services.AddSingleton<UserService>();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+builder.WebHost.ConfigureAppConfiguration((ctx, cb) =>
+{
+    if (!ctx.HostingEnvironment.IsDevelopment())
+    {
+        StaticWebAssetsLoader.UseStaticWebAssets(
+      ctx.HostingEnvironment,
+      ctx.Configuration);
+    }
+}
+);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
