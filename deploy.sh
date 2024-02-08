@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /home/alex/deployment/file-upload-blazor
-echo "cleaning up old projects"
+echo "cleaning up old projects "
 
 rm -rf bin
 rm -rf obj
