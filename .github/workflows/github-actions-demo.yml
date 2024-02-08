@@ -12,8 +12,9 @@ jobs:
 
           docker build -t bryce-test-blazor-thing .
           # run image
-          docker run -d \
+          docker run -d  \
             -p 1568:8080 \
-            --name bryce-test-blazor-thing 
+            --name bryce-test-blazor-thing \
+            bryce-test-blazor-thing
           echo "made it to the end"
 
