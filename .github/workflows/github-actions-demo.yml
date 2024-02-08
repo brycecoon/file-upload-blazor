@@ -8,10 +8,10 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: |
-          #build image
+          # build image
 
           docker build -t bryce-test-blazor-thing .
-          #run image
+          # run image
           docker run -d \
             -p 1568:8080 \
             --name bryce-test-blazor-thing 
